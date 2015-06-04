@@ -1,0 +1,239 @@
+/*@charset "utf-8";*/
+
+body {
+    font-family: 微軟正黑體;
+}
+
+html, body {
+    margin: 0;
+}
+
+.container {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.horizontalMiddle {
+    margin: 0 auto;
+}
+
+.middleContainer {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.header {
+    position: relative;
+    height: 125px;
+    z-index: 1;
+}
+
+.content{
+    position: relative;
+    z-index: 0;
+}
+
+.sub_content{
+    margin-top: 10px;
+}
+
+.banner {
+    position: absolute;
+    top: 100px;
+    z-index: 1;
+}
+
+.logo {
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.langSelect {
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+
+.logo, .nav {
+    display: inline;
+}
+
+.nav {
+    padding: 0;
+}
+
+.nav li {
+    list-style: none;
+    float: left;
+}
+
+.navContainer {
+    float: right;
+    text-align: right;
+    margin-top: 60px;
+}
+
+.menuItem{
+    margin-left: 20px;
+    height: 35px;
+    color: #000;
+}
+
+.menuDisable a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #ff7c00;
+    border-top: #ff7c00 5px solid;
+    font-weight: bolder;
+    cursor: default;
+}
+
+.menu {
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+.menu a:hover {
+    color: #ff7c00;
+    border-top: #ff7c00 5px solid;
+    font-weight: bolder;
+}
+
+.menuImgItem {
+    margin-left: 10px;
+    width: 110px;
+    height: 45px;
+}
+
+.menu1 {
+    background-image: url('../../images/top_menu_01.png');
+}
+
+.menu2 {
+    background-image: url('../../images/top_menu_02.png');
+}
+
+.menu3 {
+    background-image: url('../../images/top_menu_03.png');
+}
+
+.menu4 {
+    background-image: url('../../images/top_menu_04.png');
+}
+
+.menu5 {
+    background-image: url('../../images/top_menu_05.png');
+}
+
+.menu1:hover {
+    background-image: url('../../images/top_menu_on_01.png');
+    cursor: pointer;
+}
+
+.menu2:hover {
+    background-image: url('../../images/top_menu_on_02.png');
+    cursor: pointer;
+}
+
+.menu3:hover {
+    background-image: url('../../images/top_menu_on_03.png');
+    cursor: pointer;
+}
+
+.menu4:hover {
+    background-image: url('../../images/top_menu_on_04.png');
+    cursor: pointer;
+}
+
+.menu5:hover {
+    background-image: url('../../images/top_menu_on_05.png');
+    cursor: pointer;
+}
+
+.menu1Selected {
+    background-image: url('../../images/top_menu_on_01.png');
+}
+
+.menu2Selected {
+    background-image: url('../../images/top_menu_on_02.png');
+}
+
+.menu3Selected {
+    background-image: url('../../images/top_menu_on_03.png');
+}
+
+.menu4Selected {
+    background-image: url('../../images/top_menu_on_04.png');
+}
+
+.menu5Selected {
+    background-image: url('../../images/top_menu_on_05.png');
+}
+
+.footer {
+    /*position: fixed;*/
+    width: 960px;
+    /*bottom: 0;*/
+    /*width: 100%;*/
+}
+
+.copyRightContainer {
+    float: left;
+    margin-top: 10px;
+    width: 100%;
+    border-top: #ff7c00 solid 2px;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 14px;
+}
+
+.subTitleBanner {
+    position: absolute;
+    bottom: 5px;
+    z-index: 1;
+}
+
+.subTitleBannerBorder {
+    -webkit-box-shadow: 0px -5px 15px #7E7E7E;
+    box-shadow: 0px -5px 15px #7E7E7E;
+    border-radius: 8px;
+    border: 2px solid #FFFFFF;
+}
+
+.subBannerContainer {
+    position: relative;
+    height: 122px;
+}
+
+.sub_banner_title {
+    position: absolute;
+    font-size:35px;
+    font-weight:bolder;
+    left: 80px;
+    top: 45px;
+    /*margin-left: 80px;*/
+    /*margin-top: 50px;*/
+    color:#666666;
+    z-index: 2;
+}
+
+.title {
+    font-weight: bolder;
+    font-size: 25px;
+    color: #FF7C00;
+}
+
+.describe {
+    font-size: 18px;
+    color: #888888;
+}
+
+.sub_content>ol>li{
+    font-size: 18px;
+    color: #888888;
+}

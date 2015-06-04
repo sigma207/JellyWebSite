@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="css/jelly/index.css">
+</head>
+<body>
+<div class="bodyContainer">
+    <div class="bannerContainer middleContainer">
+        <img src="images/banner_3in1.png" class="subTitleBanner"/>
+        <!--<div id="flashContent" class="swfContainer">-->
+            <!--<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="630" height="292" id="banner_3in1"-->
+                    <!--align="middle">-->
+                <!--<param name="movie" value="swf/banner_3in1.swf"/>-->
+                <!--<param name="quality" value="best"/>-->
+                <!--<param name="bgcolor" value="#ffffff"/>-->
+                <!--<param name="play" value="true"/>-->
+                <!--<param name="loop" value="true"/>-->
+                <!--<param name="wmode" value="transparent"/>-->
+                <!--<param name="scale" value="showall"/>-->
+                <!--<param name="menu" value="true"/>-->
+                <!--<param name="devicefont" value="false"/>-->
+                <!--<param name="salign" value=""/>-->
+                <!--<param name="allowScriptAccess" value="sameDomain"/>-->
+                <!--&lt;!&ndash;[if !IE]>&ndash;&gt;-->
+                <!--<object type="application/x-shockwave-flash" data="swf/banner_3in1.swf" width="630" height="292">-->
+                    <!--<param name="movie" value="swf/banner_3in1.swf"/>-->
+                    <!--<param name="quality" value="best"/>-->
+                    <!--<param name="bgcolor" value="#ffffff"/>-->
+                    <!--<param name="play" value="true"/>-->
+                    <!--<param name="loop" value="true"/>-->
+                    <!--<param name="wmode" value="transparent"/>-->
+                    <!--<param name="scale" value="showall"/>-->
+                    <!--<param name="menu" value="true"/>-->
+                    <!--<param name="devicefont" value="false"/>-->
+                    <!--<param name="salign" value=""/>-->
+                    <!--<param name="allowScriptAccess" value="sameDomain"/>-->
+                    <!--&lt;!&ndash;<![endif]&ndash;&gt;-->
+                    <!--<a href="http://www.adobe.com/go/getflash">-->
+                        <!--<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif"-->
+                             <!--alt="取得 Adobe Flash 播放程式"/>-->
+                    <!--</a>-->
+                    <!--&lt;!&ndash;[if !IE]>&ndash;&gt;-->
+                <!--</object>-->
+                <!--&lt;!&ndash;<![endif]&ndash;&gt;-->
+            <!--</object>-->
+        <!--</div>-->
+        <div class="news">
+            <div class="newsTitle" data-i18n="main.newsTitle"></div>
+            <span data-i18n="main.news1"></span>
+        </div>
+    </div>
+</div>
+<div class="quoteChart middleContainer">
+    <div class="quoteContainer">
+        <div class="quoteItem">
+            <table class="quote1 oddEven">
+                <thead>
+                <tr>
+                    <th field="name" tdClass="golden" data-i18n="quote1.column1"></th>
+                    <th field="buying" type="number" decimal="decimal" stockChangeColorField="buyChange"
+                        riseFallStyle="forex" data-i18n="quote1.column2">
+                    </th>
+                    <th field="selling" type="number" decimal="decimal" stockChangeColorField="sellChange"
+                        riseFallStyle="forex" data-i18n="quote1.column3">
+                    </th>
+                    <th field="spread" type="number" decimal="1" data-i18n="quote1.column4"></th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="quoteItem">
+            <table width="100%" class="quote2 oddEven">
+                <thead>
+                <tr>
+                    <th field="name" tdClass="golden" data-i18n="quote2.column1"></th>
+                    <th field="transaction" type="number" decimal="4" stockChangeColorField="change"
+                        data-i18n="quote2.column2"></th>
+                    <th field="change" type="number" decimal="4" stockChangeColorField="change"
+                        data-i18n="quote2.column3"></th>
+                    <th field="changeRate" type="rate" decimal="2" stockChangeColorField="change"
+                        data-i18n="quote2.column4"></th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="canvasContainer">
+        <canvas id="canvas" class="canvas" width="318" height="192">
+            <!--This text is displayed if your browser does not support HTML5 Canvas.-->
+        </canvas>
+    </div>
+
+</div>
+<div class="productContainer middleContainer sub_content">
+    <div class="productList">
+        <div class="productItem">
+            <img src="images/index_product_01.png"/>
+            <!--<div class="productTitle" data-i18n="product1.title"></div>-->
+            <!--<div class="productDescribe" data-i18n="product1.describe"></div>-->
+            <div class="more"><a href="#" data-i18n="product.more"></a></div>
+        </div>
+        <div class="productItem">
+            <img src="images/index_product_02.png"/>
+            <!--<div class="productTitle" data-i18n="product2.title"></div>-->
+            <!--<div class="productDescribe" data-i18n="product2.describe"></div>-->
+            <div class="more"><a href="#" data-i18n="product.more"></a></div>
+
+        </div>
+        <div class="productItem">
+            <img src="images/index_product_03.png"/>
+            <!--<div class="productTitle" data-i18n="product3.title"></div>-->
+            <!--<div class="productDescribe" data-i18n="product3.describe"></div>-->
+            <div class="more"><a href="#" data-i18n="product.more"></a></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
