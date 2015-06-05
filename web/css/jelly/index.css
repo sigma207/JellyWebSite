@@ -1,10 +1,5 @@
 /*@charset "utf-8";*/
 
-.bodyContainer {
-    /*被load的話就沒有用*/
-    /*background-image: url('images/banner_bg.png');*/
-}
-
 .bannerContainer {
     /*background-image: url('../../images/banner_bg.png');*/
     position: relative;

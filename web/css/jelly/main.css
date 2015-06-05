@@ -237,3 +237,7 @@ html, body {
     font-size: 18px;
     color: #888888;
 }
+
+.bodyContainer {
+    background-image: url('../../images/banner_bg.png');
+}

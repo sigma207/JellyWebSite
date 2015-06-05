@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../js/angular.min.js"></script>
+    <script type="text/javascript" src="../js/utility.js"></script>
+    <script type="text/javascript" src="../js/jelly/config.js"></script>
+    <script>
+
+        function MyController($scope, $http) {
+            $scope.bulletinList = [];
+            $scope.editing = false;
+            $scope.editingBulletin = {};
+
+            $scope.bulletinAdd = function () {
+                $scope.editingBulletin = {};
+                $scope.editingAction = CONFIG.ADD_ACTION;
+                $scope.editing = true;
+            };
+
+            $scope.update = function (index) {
+                $scope.editingBulletin = $scope.bulletinList[index];
+                $scope.editingAction = CONFIG.UPDATE_ACTION;
+                $scope.editing = true;
+            };
+
+            $scope.remove = function (index) {
+                $scope.editingBulletin = $scope.bulletinList[index];
+                $scope.editingAction = CONFIG.REMOVE_ACTION;
+                $scope.save();
+            };
+
+            $scope.save = function () {
+                console.log($scope.editingBulletin);
+                $scope.editing = false;
+                $scope.sendBulletin($scope.editingAction, JSON.stringify($scope.editingBulletin));
+            };
+
+            $scope.cancel = function () {
+                $scope.editingBulletin = {};
+                $scope.editing = false;
+            };
+
+            $scope.getList = function () {
+                var sendData = {};
+                sendData.action = CONFIG.LIST_ACTION;
+                $http({
+                    method: "POST",
+                    url: CONFIG.BULLETIN_ACTION_URL,
+                    params: sendData
+                }).success(function (data, status, headers, config) {
+                    $scope.bulletinList = JSON.parse(data.data);
+                    console.log($scope.bulletinList);
+                }).error(function (data, status, headers, config) {
+                    console.log(status);
+                });
+            };
+
+            $scope.sendBulletin = function (action, bulletin) {
+                var sendData = {};
+                sendData.action = action;
+                sendData.data = bulletin;
+                $http({
+                    method: "POST",
+                    url: CONFIG.BULLETIN_ACTION_URL,
+                    params: sendData
+                }).success(function (data, status, headers, config) {
+                    $scope.editingBulletin = {};
+                    $scope.getList();
+                }).error(function (data, status, headers, config) {
+                    console.log(status);
+                });
+            };
+
+            $scope.getList();
+        }
+    </script>
+</head>
+<body ng-controller="MyController">
+<input type="button" value="add" ng-click="bulletinAdd()"/>
+<table>
+    <thead>
+    <tr>
+        <th>title</th>
+        <th>content</th>
+        <th>action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="bulletin in bulletinList">
+        <td>{{bulletin.title}}</td>
+        <td>{{bulletin.content}}</td>
+        <td>
+            <input type="button" value="update" ng-click="update($index)"/>
+            <input type="button" value="remove" ng-click="remove($index)"/>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div id="editingBulletin" ng-show="editing">
+    <label>title:</label>
+    <input type="text" ng-model="editingBulletin.title"/>
+    <label>content:</label>
+    <input type="text" ng-model="editingBulletin.content"/>
+    <input type="button" value="save" ng-click="save()"/>
+    <input type="button" value="cancel" ng-click="cancel()"/>
+</div>
+
+<script>
+    var myApp = angular.module("myApp", []);
+    myApp.controller("MyController", MyController);
+</script>
+</body>
+</html>
