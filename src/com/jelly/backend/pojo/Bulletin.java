@@ -7,6 +7,7 @@ public class Bulletin {
     private int id;
     private String title;
     private String content;
+    private Boolean editing;
 
     public int getId() {
         return id;
@@ -30,5 +31,13 @@ public class Bulletin {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public Boolean isEditing() {
+        return editing;
+    }
+
+    public void setEditing(Boolean editing) {
+        this.editing = editing;
     }
 }

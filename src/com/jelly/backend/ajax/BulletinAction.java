@@ -2,6 +2,7 @@ package com.jelly.backend.ajax;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import com.google.gson.reflect.TypeToken;
 import com.jelly.backend.MySql;
 import com.jelly.backend.pojo.Bulletin;
 
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.lang.reflect.Type;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,15 +25,14 @@ import java.util.Map;
 @WebServlet(name = "BulletinAction", urlPatterns = "/BulletinAction")
 public class BulletinAction extends HttpServlet {
     MySql mysql = new MySql();
-
+    private String account = "jelly";
+    private String password = "jelly123";
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
-        String text = "some text";
         Gson gson = new Gson();
         JsonObject myObj = new JsonObject();
         response.setContentType("text/plain");  // Set content type of the response so that jQuery knows what it can expect.
         response.setCharacterEncoding("UTF-8"); // You want world domination, huh?
-        System.out.println("action=" + action);
         try {
             if (action.equals("list")) {
                 List<Bulletin> bulletinList = getBulletinList();
@@ -52,10 +53,17 @@ public class BulletinAction extends HttpServlet {
                 Bulletin bulletin = gson.fromJson(data, Bulletin.class);
                 boolean success = updateBulletin(bulletin);
                 myObj.addProperty("success", success);
+            } else if(action.equals("login")){
+                String data = request.getParameter("data");
+                Type stringMap = new TypeToken<Map<String,String>>(){}.getType();
+                Map<String,String> map = gson.fromJson(data,stringMap);
+                myObj.addProperty("success", (map.get("account").equals(account)&&map.get("password").equals(password)));
             }
-            response.getWriter().write(myObj.toString());
         }catch (Exception e){
-            e.printStackTrace();
+            myObj.addProperty("msg",e.getMessage());
+            myObj.addProperty("success",false);
+        } finally {
+            response.getWriter().write(myObj.toString());
         }
 
     }

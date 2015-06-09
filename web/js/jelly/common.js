@@ -78,10 +78,14 @@ function loadBulletin() {
     $.post(CONFIG.BULLETIN_ACTION_URL, sendData, onBulletinsLoad, "json");
 
     function onBulletinsLoad(data, status, jqXHR) {
-        var bulletinList = JSON.parse(data.data);
-        var news = $(".news");
-        for (var i = 0; i < bulletinList.length; i++) {
-            news.append("<div>" + bulletinList[i].title + "</div>")
+        if(data.success){
+            var bulletinList = JSON.parse(data.data);
+            var news = $(".news");
+            for (var i = 0; i < bulletinList.length; i++) {
+                news.append("<div>" + bulletinList[i].content + "</div>")
+            }
+        }else{
+            console.log(data.msg);
         }
     }
 }

@@ -6,5 +6,6 @@ var CONFIG = {
     ADD_ACTION: "add",
     UPDATE_ACTION: "update",
     REMOVE_ACTION: "remove",
-    LIST_ACTION: "list"
+    LIST_ACTION: "list",
+    LOGIN_ACTION:"login"
 };

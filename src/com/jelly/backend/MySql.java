@@ -31,7 +31,7 @@ public class MySql {
         return conn;
     }
 
-    public List<Map<String, String>> query(String sql) {
+    public List<Map<String, String>> query(String sql) throws Exception{
         List<Map<String, String>> list = new ArrayList<Map<String, String>>();
         Connection conn = null;
         ResultSet rs = null;
@@ -55,6 +55,7 @@ public class MySql {
             }
         }catch (Exception e){
             e.printStackTrace();
+            throw e;
         } finally {
             try{
                 if(rs != null){
