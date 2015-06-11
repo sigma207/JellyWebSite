@@ -42,6 +42,7 @@ function changeLang(lang) {
         $(".container").i18n();
         quote1.changeLangClass(currentLang);
         quote2.changeLangClass(currentLang);
+        onLangChange();
     });
 }
 

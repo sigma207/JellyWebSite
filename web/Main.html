@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="describe">
     <title>index</title>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" href="css/jelly/main.css">
     <link rel="stylesheet" href="css/dynamicTable.css">
     <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
     <script type="text/javascript" src="js/i18next-1.8.0.js"></script>
     <script type="text/javascript" src="js/numeral.min.js"></script>
@@ -54,7 +56,17 @@
     <div class="content"></div>
     <div class="footer middleContainer">
         <div class="copyRightContainer" data-i18n="main.copyRight"></div>
+        <a id="download" href="javascript:openDownload()" style="display: none;">download</a>
     </div>
+    <div class="other" style="display:none;">
+        <a id="downloadPdf" href="download/sample.pdf" target="_blank" style="display:none;">download</a>
+        <div class="downloadDialog">
+            <label id="downloadPasswordLabel" for="downloadPassword"></label>
+            <input id="downloadPassword" type="password"/>
+            <input id="downloadButton" type="button"/>
+        </div>
+    </div>
+
 </div>
 </body>
 </html>

@@ -1,6 +1,7 @@
 /**
  * Created by user on 2015/4/28.
  */
+var downloadDialog;
 var contentUrl = {
     index: "jelly/Index.html",
     menu1: "jelly/Introduction.html",
@@ -14,10 +15,15 @@ function init() {
     if ($.browser.mobile) {
         window.location.href = "Mobile.html";
     }
+    downloadDialog = $(".downloadDialog");
+    downloadDialog.dialog({
+        autoOpen: false
+    });
+    $("#downloadButton").on("click",downloadClick);
     initMenu();
 }
 
-function initMenu(){
+function initMenu() {
     $(".menuImgItem").on("click", menuClick);
 }
 
@@ -97,3 +103,27 @@ function tableRowClick(e, tr, tableClass, rowIndex, rowData) {
     runChart(rowData);
 }
 
+function openDownload(){
+    downloadDialog.dialog("open");
+}
+
+function downloadClick(e) {
+    var sendData = {};
+    sendData.password = $("#downloadPassword").val();
+    $.post(CONFIG.JELLY_ACTION_URL, sendData, onCheckPdfPassword, "json");
+
+    function onCheckPdfPassword(data, status, jqXHR) {
+        if(data.success){
+            document.getElementById("downloadPdf").click();
+            downloadDialog.dialog("close");
+        }else{
+            alert(i18n.t("main.passwordWrong"));
+        }
+    }
+}
+
+function onLangChange() {
+    downloadDialog.dialog("option", "title", i18n.t("main.downloadTitle"));
+    $("#downloadButton").attr("value", i18n.t("main.download"));
+    $("#downloadPasswordLabel").html(i18n.t("main.password") + ":");
+}

@@ -108,3 +108,6 @@ function tableRowClick(e, tr, tableClass, rowIndex, rowData) {
     canvasContainer.css("top", (trOffsetTop - canvasHeight - headHeight) + "px");
     canvasContainer.show();
 }
+
+function onLangChange() {
+}
