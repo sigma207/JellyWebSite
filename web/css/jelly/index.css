@@ -36,6 +36,7 @@ table {
     border-collapse: collapse;
     /*border: 1px solid #000;*/
     font-size: 12px;
+
 }
 
 .quote1 {
@@ -48,6 +49,7 @@ th {
 
 th, td {
     height: 25px;
+    font-weight:bold;
 }
 
 .oddTr {

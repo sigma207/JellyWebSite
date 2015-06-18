@@ -1,5 +1,6 @@
 {
   "main": {
+    "imageFolder":"locales/zh-TW/images/",
     "pageTitle":"傑利科技",
     "menu1": "公司簡介",
     "menu2": "產品型錄",
@@ -11,17 +12,20 @@
     "copyRight": "CopyrightⒸ2015 傑利科技股份有限公司 Jelly Technology Inc. 版權所有，不得轉載",
     "copyRight1": "CopyrightⒸ2015 傑利科技股份有限公司",
     "copyRight2": "Jelly Technology Inc. 版權所有，不得轉載",
-    "serviceEmail": "service@jelly.com",
+    "serviceEmail": "service@jellytrades.com",
     "serviceEmailTo": "mailto:$t(main.serviceEmail)",
-    "salesEmail": "sales@jelly.com",
+    "salesEmail": "sales@jellytrades.com",
     "salesEmailTo": "mailto:$t(main.salesEmail)",
-    "tel": "(852)1234567",
-    "fax": "(852)1234567",
+    "tel": "(02)8797-1010",
+    "fax": "(02)2657-8008",
     "onLineService": "在線客服",
     "download":"下載",
     "password":"密碼",
     "passwordWrong":"密碼錯誤",
     "downloadTitle":"請輸入下載密碼"
+  },
+  "images":{
+    "logo":"$t(main.imageFolder)logo.png"
   },
   "quote1": {
     "column1": "貨幣對",
@@ -90,7 +94,7 @@
       "email": "email",
       "tel": "電話",
       "address": "地址",
-      "describe3": "台北市內湖區瑞光路258巷51號3樓"
+      "describe3": "台北市內湖區瑞光路258巷2號4樓之4"
     }
   }
 }
