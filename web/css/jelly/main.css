@@ -110,69 +110,199 @@ html, body {
     height: 45px;
 }
 
-.menu1 {
-    background-image: url('../../images/top_menu_01.png');
+.menu1:lang(zh-TW) {
+    background-image: url('../../locales/zh-TW/images/top_menu_01.png');
 }
 
-.menu2 {
-    background-image: url('../../images/top_menu_02.png');
+.menu2:lang(zh-TW) {
+    background-image: url('../../locales/zh-TW/images/top_menu_02.png');
 }
 
-.menu3 {
-    background-image: url('../../images/top_menu_03.png');
+.menu3:lang(zh-TW) {
+    background-image: url('../../locales/zh-TW/images/top_menu_03.png');
 }
 
-.menu4 {
-    background-image: url('../../images/top_menu_04.png');
+.menu4:lang(zh-TW) {
+    background-image: url('../../locales/zh-TW/images/top_menu_04.png');
 }
 
-.menu5 {
-    background-image: url('../../images/top_menu_05.png');
+.menu5:lang(zh-TW) {
+    background-image: url('../../locales/zh-TW/images/top_menu_05.png');
 }
 
-.menu1:hover {
-    background-image: url('../../images/top_menu_on_01.png');
+.menu1:lang(zh-TW):hover {
+    background-image: url('../../locales/zh-TW/images/top_menu_on_01.png');
     cursor: pointer;
 }
 
-.menu2:hover {
-    background-image: url('../../images/top_menu_on_02.png');
+.menu2:lang(zh-TW):hover {
+    background-image: url('../../locales/zh-TW/images/top_menu_on_02.png');
     cursor: pointer;
 }
 
-.menu3:hover {
-    background-image: url('../../images/top_menu_on_03.png');
+.menu3:lang(zh-TW):hover {
+    background-image: url('../../locales/zh-TW/images/top_menu_on_03.png');
     cursor: pointer;
 }
 
-.menu4:hover {
-    background-image: url('../../images/top_menu_on_04.png');
+.menu4:lang(zh-TW):hover {
+    background-image: url('../../locales/zh-TW/images/top_menu_on_04.png');
     cursor: pointer;
 }
 
-.menu5:hover {
-    background-image: url('../../images/top_menu_on_05.png');
+.menu5:lang(zh-TW):hover {
+    background-image: url('../../locales/zh-TW/images/top_menu_on_05.png');
     cursor: pointer;
 }
 
-.menu1Selected {
-    background-image: url('../../images/top_menu_on_01.png');
+.menu1Selected:lang(zh-TW) {
+    background-image: url('../../locales/zh-TW/images/top_menu_on_01.png');
 }
 
-.menu2Selected {
-    background-image: url('../../images/top_menu_on_02.png');
+.menu2Selected:lang(zh-TW) {
+    background-image: url('../../locales/zh-TW/images/top_menu_on_02.png');
 }
 
-.menu3Selected {
-    background-image: url('../../images/top_menu_on_03.png');
+.menu3Selected:lang(zh-TW) {
+    background-image: url('../../locales/zh-TW/images/top_menu_on_03.png');
 }
 
-.menu4Selected {
-    background-image: url('../../images/top_menu_on_04.png');
+.menu4Selected:lang(zh-TW) {
+    background-image: url('../../locales/zh-TW/images/top_menu_on_04.png');
 }
 
-.menu5Selected {
-    background-image: url('../../images/top_menu_on_05.png');
+.menu5Selected:lang(zh-TW) {
+    background-image: url('../../locales/zh-TW/images/top_menu_on_05.png');
+}
+
+.menu1:lang(zh-CN) {
+    background-image: url('../../locales/zh-CN/images/top_menu_01.png');
+}
+
+.menu2:lang(zh-CN) {
+    background-image: url('../../locales/zh-CN/images/top_menu_02.png');
+}
+
+.menu3:lang(zh-CN) {
+    background-image: url('../../locales/zh-CN/images/top_menu_03.png');
+}
+
+.menu4:lang(zh-CN) {
+    background-image: url('../../locales/zh-CN/images/top_menu_04.png');
+}
+
+.menu5:lang(zh-CN) {
+    background-image: url('../../locales/zh-CN/images/top_menu_05.png');
+}
+
+.menu1:lang(zh-CN):hover {
+    background-image: url('../../locales/zh-CN/images/top_menu_on_01.png');
+    cursor: pointer;
+}
+
+.menu2:lang(zh-CN):hover {
+    background-image: url('../../locales/zh-CN/images/top_menu_on_02.png');
+    cursor: pointer;
+}
+
+.menu3:lang(zh-CN):hover {
+    background-image: url('../../locales/zh-CN/images/top_menu_on_03.png');
+    cursor: pointer;
+}
+
+.menu4:lang(zh-CN):hover {
+    background-image: url('../../locales/zh-CN/images/top_menu_on_04.png');
+    cursor: pointer;
+}
+
+.menu5:lang(zh-CN):hover {
+    background-image: url('../../locales/zh-CN/images/top_menu_on_05.png');
+    cursor: pointer;
+}
+
+.menu1Selected:lang(zh-CN) {
+    background-image: url('../../locales/zh-CN/images/top_menu_on_01.png');
+}
+
+.menu2Selected:lang(zh-CN) {
+    background-image: url('../../locales/zh-CN/images/top_menu_on_02.png');
+}
+
+.menu3Selected:lang(zh-CN) {
+    background-image: url('../../locales/zh-CN/images/top_menu_on_03.png');
+}
+
+.menu4Selected:lang(zh-CN) {
+    background-image: url('../../locales/zh-CN/images/top_menu_on_04.png');
+}
+
+.menu5Selected:lang(zh-CN) {
+    background-image: url('../../locales/zh-CN/images/top_menu_on_05.png');
+}
+
+.menu1:lang(en-US) {
+    background-image: url('../../locales/en-US/images/top_menu_01.png');
+}
+
+.menu2:lang(en-US) {
+    background-image: url('../../locales/en-US/images/top_menu_02.png');
+}
+
+.menu3:lang(en-US) {
+    background-image: url('../../locales/en-US/images/top_menu_03.png');
+}
+
+.menu4:lang(en-US) {
+    background-image: url('../../locales/en-US/images/top_menu_04.png');
+}
+
+.menu5:lang(en-US) {
+    background-image: url('../../locales/en-US/images/top_menu_05.png');
+}
+
+.menu1:lang(en-US):hover {
+    background-image: url('../../locales/en-US/images/top_menu_on_01.png');
+    cursor: pointer;
+}
+
+.menu2:lang(en-US):hover {
+    background-image: url('../../locales/en-US/images/top_menu_on_02.png');
+    cursor: pointer;
+}
+
+.menu3:lang(en-US):hover {
+    background-image: url('../../locales/en-US/images/top_menu_on_03.png');
+    cursor: pointer;
+}
+
+.menu4:lang(en-US):hover {
+    background-image: url('../../locales/en-US/images/top_menu_on_04.png');
+    cursor: pointer;
+}
+
+.menu5:lang(en-US):hover {
+    background-image: url('../../locales/en-US/images/top_menu_on_05.png');
+    cursor: pointer;
+}
+
+.menu1Selected:lang(en-US) {
+    background-image: url('../../locales/en-US/images/top_menu_on_01.png');
+}
+
+.menu2Selected:lang(en-US) {
+    background-image: url('../../locales/en-US/images/top_menu_on_02.png');
+}
+
+.menu3Selected:lang(en-US) {
+    background-image: url('../../locales/en-US/images/top_menu_on_03.png');
+}
+
+.menu4Selected:lang(en-US) {
+    background-image: url('../../locales/en-US/images/top_menu_on_04.png');
+}
+
+.menu5Selected:lang(en-US) {
+    background-image: url('../../locales/en-US/images/top_menu_on_05.png');
 }
 
 .footer {

@@ -73,5 +73,8 @@ var DomTool = {
 
         parent1.insertBefore(elm2, next1);
         parent2.insertBefore(elm1, next2);
+    },
+    appendCss: function (href) {
+        $("head").append($("<link rel='stylesheet' type='text/css' href='" + href + "'>"));
     }
 };

@@ -1,6 +1,7 @@
 {
+  "lang":"zh-CN",
   "main": {
-    "imageFolder":"locales/zh-TW/images/",
+    "imageFolder": "locales/$t(lang)/images/",
     "pageTitle":"杰利科技",
     "menu1": "公司简介",
     "menu2": "产品型录",
@@ -25,7 +26,17 @@
     "downloadTitle":"请输入下载密码"
   },
   "images":{
-    "logo":"$t(main.imageFolder)logo.png"
+    "logo":"$t(main.imageFolder)logo.png",
+    "support": "$t(main.imageFolder)support.png",
+    "index_product_01":"$t(main.imageFolder)index_product_01.png",
+    "index_product_02":"$t(main.imageFolder)index_product_02.png",
+    "index_product_03":"$t(main.imageFolder)index_product_03.png",
+    "sub_banner_01":"$t(main.imageFolder)sub_banner_01.png",
+    "sub_banner_02":"$t(main.imageFolder)sub_banner_02.png",
+    "sub_banner_03":"$t(main.imageFolder)sub_banner_03.png",
+    "sub_banner_04":"$t(main.imageFolder)sub_banner_04.png",
+    "sub_banner_05":"$t(main.imageFolder)sub_banner_05.png",
+    "about_img":"$t(main.imageFolder)about_img.png"
   },
   "quote1": {
     "column1": "货币对",

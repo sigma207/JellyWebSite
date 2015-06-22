@@ -270,7 +270,9 @@ var DragTable = {
         };
 
         dt.onRowClick = function (e) {
-            e.originalEvent.stopPropagation();//防止click事件影响canvas判斷hide
+            if($.browser.mobile ){//避免IE8出錯
+                e.originalEvent.stopPropagation();//防止click事件影响canvas判斷hide
+            }
             var tr = e.currentTarget;
             var tableClass = dt.tableClass;
             var rowIndex = $(tr).attr("rowIndex");

@@ -81,9 +81,12 @@ function onIndexLoad() {
     quote1.setDataSource(forexMetalData);
     quote2.setDataSource(stockData);
 
+    var rowData = forexMetalData[0];
+    generateValueList(rowData);
     if (document.createElement('canvas').getContext) {//support canvas
         $(document).on("rowClick", tableRowClick);
         rangeChartInit("value", "volume", "time");
+        runChart(rowData);
     } else {
         $(".quoteContainer").css("width", "960px");
         $(".quoteItem").css("width", "479px");
@@ -91,9 +94,6 @@ function onIndexLoad() {
         $(".oddEven>tbody>tr:odd").addClass("oddTr");
         $(".oddEven>tbody>tr:even").addClass("evenTr");
     }
-    var rowData = forexMetalData[0];
-    generateValueList(rowData);
-    runChart(rowData);
 }
 
 function tableRowClick(e, tr, tableClass, rowIndex, rowData) {
